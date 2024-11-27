@@ -9,6 +9,7 @@ export default class CartPage {
 
   get MINICART() {
     return {
+      icon: this.page.getByTestId('miniCart'),
       productsCountHeader: this.page.locator('div.mini-cart__header-count'),
       checkoutBtn: this.page.getByTestId('miniCartCheckoutButton'),
     };
@@ -17,12 +18,22 @@ export default class CartPage {
   get PAYMENTSUMMARY() {
     return {
       checkoutBtn: this.page.getByTestId('loginCheckoutButton'),
+      productsCountHeader: this.page.getByTestId('page-layout-subtitle'),
     };
   }
 
   get PRODUCTS() {
     return {
       allProducts: this.page.getByTestId('regular-cart-list').locator('> div'),
+    };
+  }
+
+  get ACTIONS() {
+    return {
+      removeBtn: this.page
+        .getByTestId('regular-cart-list')
+        .getByTestId('cartRemoveButton'),
+      confirmRemoveBtn: this.page.getByTestId('remove-item-submit-button'),
     };
   }
 }
