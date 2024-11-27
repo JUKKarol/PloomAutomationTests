@@ -2,10 +2,6 @@ import { test, expect } from '../pages/base.page';
 import { NAV_SUPPORT } from '../supports/nav.support';
 import { USER_SUPPORT } from '../supports/user.support';
 
-import dotenv from 'dotenv';
-
-dotenv.config();
-
 test.beforeEach(async ({ page }) => {
   await page.goto('/');
 

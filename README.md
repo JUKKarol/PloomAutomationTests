@@ -20,11 +20,11 @@ This project contains automated tests for the Ploom application. The tests are d
    ```sh
    npm install
    ```
-4. Copy .env.example file as .env in same directory
+4. Copy `.env.example` file as `.env` in same directory
    ```sh
    cp .env.example .env
    ```
-5. In .env specify url for site you want to test
+5. In the `.env` file, specify the URL for the site you want to test
    ```
    BASE_URL=https://example.com
    ```
