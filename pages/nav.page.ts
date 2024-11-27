@@ -7,13 +7,15 @@ export default class NavPage {
     this.page = page;
   }
 
-  get logo() {
-    return this.page.getByTestId('headerLogo');
+  get LOGO() {
+    return { img: this.page.getByTestId('headerLogo') };
   }
 
   get HEADER() {
     return {
-      shop: this.page.getByTestId('headerItem-0'),
+      navItems: this.page.locator(
+        'ul.navigation__listWrapper li.navigation__item',
+      ),
     };
   }
 }

@@ -18,7 +18,9 @@ export default class CartPage {
   get PAYMENTSUMMARY() {
     return {
       checkoutBtn: this.page.getByTestId('loginCheckoutButton'),
-      productsCountHeader: this.page.getByTestId('page-layout-subtitle'),
+      productsCountHeader: this.page.locator(
+        '#one-page-checkout header strong, #aem-checkout [class*="PageLayout-module-title"] span',
+      ),
     };
   }
 
