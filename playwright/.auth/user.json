@@ -1,0 +1,229 @@
+{
+  "cookies": [
+    {
+      "name": "_GRECAPTCHA",
+      "value": "09ANOXeZyDWJilULRG5N2HqcD0KsQYpWFnIsGR6pFJlSejg6s9i7n0zgiv5Om3s7KdBXcY62PZm_wbQzxuIXhw06o",
+      "domain": "www.google.com",
+      "path": "/recaptcha",
+      "expires": 1748203563.323809,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "demdex",
+      "value": "72160273429225800581078685387756115620",
+      "domain": ".demdex.net",
+      "path": "/",
+      "expires": 1748203561.680584,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "kndctr_6F68219F5D6E70510A495E5D_AdobeOrg_identity",
+      "value": "CiY3ODM2NjYyOTI0MzEwMjM0OTk0MDQ0MDYwMDA3NDc5MzI0MzAyMFITCPbd0tC2MhABGAEqBElSTDEwAPAB9t3S0LYy",
+      "domain": ".ploom.co.uk",
+      "path": "/",
+      "expires": 1766779562,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "kndctr_6F68219F5D6E70510A495E5D_AdobeOrg_cluster",
+      "value": "irl1",
+      "domain": ".ploom.co.uk",
+      "path": "/",
+      "expires": 1732653362,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "AMCV_6F68219F5D6E70510A495E5D%40AdobeOrg",
+      "value": "MCMID|78366629243102349940440600074793243020",
+      "domain": ".ploom.co.uk",
+      "path": "/",
+      "expires": 1766347562,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__td_signed",
+      "value": "true",
+      "domain": ".ploom.co.uk",
+      "path": "/",
+      "expires": 1767211562.787423,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_td",
+      "value": "23e11e16-f7e5-4961-ad66-5a04fb4a5da1",
+      "domain": ".ploom.co.uk",
+      "path": "/",
+      "expires": 1767211562.788283,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "BIGipServerpool_jtigcc",
+      "value": "6d8a25bd761e6cd6532193bb9304df7c",
+      "domain": "gcc.ploom.co.uk",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "BIGipServerpool_jtigcc",
+      "value": "4545c7943b9194db9f3d34bc0789f78a",
+      "domain": "jtigcc.service-now.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "JSESSIONID",
+      "value": "1FE565BDCA44A826BC6A3FDFE2AFFD72",
+      "domain": "gcc.ploom.co.uk",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "glide_user_route",
+      "value": "glide.087c2b3a89d21d1c35d606241417e0b2",
+      "domain": "gcc.ploom.co.uk",
+      "path": "/",
+      "expires": 1767211563.255581,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "glide_node_id_for_js",
+      "value": "932ebee2945e7e74a50fa93bc31c6e1dc532a760494058a4e6c08dd9c716ce3e",
+      "domain": "gcc.ploom.co.uk",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "glide_language",
+      "value": "en",
+      "domain": "gcc.ploom.co.uk",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "OptanonAlertBoxClosed",
+      "value": "2024-11-26T20:06:04.275Z",
+      "domain": ".www.ploom.co.uk",
+      "path": "/",
+      "expires": 1764187564,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "OptanonConsent",
+      "value": "isGpcEnabled=0&datestamp=Tue+Nov+26+2024+21%3A06%3A04+GMT%2B0100+(Central+European+Standard+Time)&version=202209.2.0&isIABGlobal=false&hosts=&consentId=4732ae1a-bcb6-41f7-9523-ab0f1ac3a805&interactionCount=1&landingPath=NotLandingPage&groups=C0002%3A1%2CC0004%3A1%2CC0005%3A1%2CC0003%3A1%2CC0001%3A1",
+      "domain": ".www.ploom.co.uk",
+      "path": "/",
+      "expires": 1764187564,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "isAgeConfirmed",
+      "value": "true",
+      "domain": "www.ploom.co.uk",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://www.ploom.co.uk",
+      "localStorage": [
+        {
+          "name": "NRBA_SESSION",
+          "value": "{\"value\":\"386821e43291828d\",\"inactiveAt\":1732653364270,\"expiresAt\":1732665963074,\"updatedAt\":1732651564270,\"sessionReplayMode\":0,\"sessionReplaySentFirstChunk\":false,\"sessionTraceMode\":1,\"traceHarvestStarted\":true,\"serverTimeDiff\":1183,\"custom\":{}}"
+        },
+        {
+          "name": "_grecaptcha",
+          "value": "09ANOXeZyFzjs7gTWvTVdS-YMK_gCvN7RCURSh4HTqXspCHZ4ZWLePO5Y1XK8BClp7C9JoBElvbd2hxWjTErIF6QCTHxfiFXky0IpUfywg8nzempSTMio5SX8WWWJBAHrw"
+        },
+        {
+          "name": "ec.last_nav_data",
+          "value": "{\"portal\":\"7f9327ba874812505f2865340cbb3551\",\"path\":\"https://gcc.ploom.co.uk/7f9327ba874812505f2865340cbb3551\"}"
+        }
+      ]
+    },
+    {
+      "origin": "https://www.google.com",
+      "localStorage": [
+        {
+          "name": "rc::a",
+          "value": "NzU0Mjd2andxdGZq"
+        },
+        {
+          "name": "rc::f",
+          "value": "0aAI_dno755OoN3zzBtzPGdYf1Yke98TTaYc91981aURKMGFQnw8ZADlTzr8IyURtCV7kuSys"
+        }
+      ]
+    },
+    {
+      "origin": "https://gcc.ploom.co.uk",
+      "localStorage": [
+        {
+          "name": "EC_UNREAD_MSG",
+          "value": "{\"Text\":\"\",\"Image\":\"\",\"Link\":\"\",\"File\":\"\",\"Html\":\"\",\"Other\":\"\",\"Unknown\":\"\"}"
+        },
+        {
+          "name": "navigation",
+          "value": "{\"navigationArr\":[]}"
+        },
+        {
+          "name": "tabKey",
+          "value": "8295.678313278357"
+        },
+        {
+          "name": "EC_UNREAD_COUNT_MAP",
+          "value": "{\"total\":0,\"Text\":0,\"Image\":0,\"Link\":0,\"File\":0,\"Html\":0,\"Other\":0,\"Unknown\":0}"
+        },
+        {
+          "name": "sn.tabs.sn.$sp.activeTab",
+          "value": "440e8190440e52e0440e5020440e4660"
+        },
+        {
+          "name": "glideStatus",
+          "value": "false"
+        },
+        {
+          "name": "EC_NOTIF_COUNT_MAP",
+          "value": "{\"total\":0,\"Chat\":0,\"Cases\":0,\"Walk-up\":0,\"Technician Visit\":0}"
+        }
+      ]
+    }
+  ]
+}
