@@ -8,52 +8,56 @@ test.beforeEach(async ({ page }) => {
   await USER_SUPPORT.acceptCookiesAndAge({ page });
 });
 
-test('Verify if it is possible to add a product to the cart', async ({
-  page,
-  navPage,
-  cartPage,
-  productPage,
-}) => {
-  await NAV_SUPPORT.goToShop({ navPage });
+test.describe('Cart Functionality', () => {
+  test('Verify if it is possible to add a product to the cart', async ({
+    page,
+    navPage,
+    cartPage,
+    productPage,
+  }) => {
+    await NAV_SUPPORT.goToShop({ navPage });
 
-  await page.locator('div[data-sku]').first().click();
-  await productPage.ACTIONS.addToCartBtn.click();
-  await expect(cartPage.MINICART.productsCountHeader).toContainText('1');
-  await cartPage.MINICART.checkoutBtn.click();
+    await page.locator('div[data-sku]').first().click();
+    await productPage.ACTIONS.addToCartBtn.click();
+    await expect(cartPage.MINICART.productsCountHeader).toContainText('1');
+    await cartPage.MINICART.checkoutBtn.click();
 
-  await cartPage.PAYMENTSUMMARY.checkoutBtn.waitFor();
+    await cartPage.PAYMENTSUMMARY.checkoutBtn.waitFor();
 
-  await expect(cartPage.PAYMENTSUMMARY.productsCountHeader).toContainText('1');
-  const cartItems = await cartPage.PRODUCTS.allProducts;
-  await expect(await cartItems.count()).toBe(1);
-  await expect(cartItems).toContainText('Ploom X Advanced');
-});
+    await expect(cartPage.PAYMENTSUMMARY.productsCountHeader).toContainText(
+      '1',
+    );
+    const cartItems = await cartPage.PRODUCTS.allProducts;
+    await expect(await cartItems.count()).toBe(1);
+    await expect(cartItems).toContainText('Ploom X Advanced');
+  });
 
-test('Verify if it is possible to remove a product from the cart', async ({
-  page,
-  navPage,
-  cartPage,
-  productPage,
-}) => {
-  await NAV_SUPPORT.goToShop({ navPage });
+  test('Verify if it is possible to remove a product from the cart', async ({
+    page,
+    navPage,
+    cartPage,
+    productPage,
+  }) => {
+    await NAV_SUPPORT.goToShop({ navPage });
 
-  await page.locator('div[data-sku]').first().click();
-  await productPage.ACTIONS.addToCartBtn.click();
-  await cartPage.MINICART.checkoutBtn.click();
+    await page.locator('div[data-sku]').first().click();
+    await productPage.ACTIONS.addToCartBtn.click();
+    await cartPage.MINICART.checkoutBtn.click();
 
-  await cartPage.PAYMENTSUMMARY.checkoutBtn.waitFor();
-  await cartPage.PRODUCTS.allProducts;
-  await cartPage.ACTIONS.removeBtn.click();
-  await cartPage.ACTIONS.confirmRemoveBtn.click();
-  await page
-    .getByTestId('emptyCartContainer')
-    .first()
-    .waitFor({ state: 'attached' });
+    await cartPage.PAYMENTSUMMARY.checkoutBtn.waitFor();
+    await cartPage.PRODUCTS.allProducts;
+    await cartPage.ACTIONS.removeBtn.click();
+    await cartPage.ACTIONS.confirmRemoveBtn.click();
+    await page
+      .getByTestId('emptyCartContainer')
+      .first()
+      .waitFor({ state: 'attached' });
 
-  await expect(await cartPage.PRODUCTS.allProducts.count()).toBe(0);
+    await expect(await cartPage.PRODUCTS.allProducts.count()).toBe(0);
 
-  await cartPage.MINICART.icon.click();
-  await expect(cartPage.MINICART.productsCountHeader).toContainText('0');
+    await cartPage.MINICART.icon.click();
+    await expect(cartPage.MINICART.productsCountHeader).toContainText('0');
+  });
 });
 
 test('Verify broken links and images on the product page', async ({
