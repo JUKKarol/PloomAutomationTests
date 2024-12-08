@@ -1,21 +1,25 @@
-import { Page } from '@playwright/test';
+import { expect, type Locator, type Page } from '@playwright/test';
 
-export default class NavPage {
-  page: Page;
+export class NavPage {
+  readonly page: Page;
+  readonly logo: Locator;
+  readonly navItems: Locator;
 
   constructor(page: Page) {
     this.page = page;
+    this.logo = page.getByTestId('headerLogo');
+    this.navItems = page.locator(
+      'ul.navigation__listWrapper li.navigation__item',
+    );
   }
 
-  get LOGO() {
-    return { img: this.page.getByTestId('headerLogo') };
-  }
+  async goToShop() {
+    if (process.env.BASE_URL?.trim().toLowerCase().endsWith('pl')) {
+      await this.navItems.nth(1).click();
+    } else {
+      await this.navItems.first().click();
+    }
 
-  get HEADER() {
-    return {
-      navItems: this.page.locator(
-        'ul.navigation__listWrapper li.navigation__item',
-      ),
-    };
+    await this.logo.first().hover();
   }
 }

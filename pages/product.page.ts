@@ -1,15 +1,11 @@
-import { Page } from '@playwright/test';
+import { expect, type Locator, type Page } from '@playwright/test';
 
-export default class ProductPage {
-  page: Page;
+export class ProductPage {
+  readonly page: Page;
+  readonly addToCartBtn: Locator;
 
   constructor(page: Page) {
     this.page = page;
-  }
-
-  get ACTIONS() {
-    return {
-      addToCartBtn: this.page.getByTestId('pdpAddToProduct'),
-    };
+    this.addToCartBtn = page.getByTestId('pdpAddToProduct');
   }
 }
