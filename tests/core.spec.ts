@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { CartPage } from '../pages/cart.page';
+import { MiniCartPage } from '../pages/minicart.page';
 import { NavPage } from '../pages/nav.page';
 import { ProductPage } from '../pages/product.page';
 import { UserPage } from '../pages/user.page';
@@ -16,6 +17,7 @@ test.describe('Cart Functionality', () => {
     page,
   }) => {
     const cartPage = new CartPage(page);
+    const miniCartPage = new MiniCartPage(page);
     const navPage = new NavPage(page);
     const productPage = new ProductPage(page);
 
@@ -23,8 +25,8 @@ test.describe('Cart Functionality', () => {
 
     await page.locator('div[data-sku]').first().click();
     await productPage.addToCartBtn.click();
-    await expect(cartPage.minicartProductsCountHeader).toContainText('1');
-    await cartPage.minicartCheckoutBtn.click();
+    await expect(miniCartPage.ProductsCountHeader).toContainText('1');
+    await miniCartPage.CheckoutBtn.click();
 
     await cartPage.checkoutBtn.waitFor();
 
@@ -38,6 +40,7 @@ test.describe('Cart Functionality', () => {
     page,
   }) => {
     const cartPage = new CartPage(page);
+    const miniCartPage = new MiniCartPage(page);
     const navPage = new NavPage(page);
     const productPage = new ProductPage(page);
 
@@ -45,7 +48,7 @@ test.describe('Cart Functionality', () => {
 
     await page.locator('div[data-sku]').first().click();
     await productPage.addToCartBtn.click();
-    await cartPage.minicartCheckoutBtn.click();
+    await miniCartPage.CheckoutBtn.click();
 
     await cartPage.checkoutBtn.waitFor();
     await cartPage.allProducts;
@@ -58,8 +61,8 @@ test.describe('Cart Functionality', () => {
 
     await expect(await cartPage.allProducts.count()).toBe(0);
 
-    await cartPage.minicartIcon.click();
-    await expect(cartPage.minicartProductsCountHeader).toContainText('0');
+    await miniCartPage.Icon.click();
+    await expect(miniCartPage.ProductsCountHeader).toContainText('0');
   });
 });
 
