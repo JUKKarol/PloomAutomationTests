@@ -13,11 +13,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe('Cart Functionality', () => {
-  test('Verify if it is possible to add a product to the cart', async ({
-    page,
-  }) => {
-    const cartPage = new CartPage(page);
-    const miniCartPage = new MiniCartPage(page);
+  test.beforeEach(async ({ page }) => {
     const navPage = new NavPage(page);
     const productPage = new ProductPage(page);
 
@@ -25,6 +21,13 @@ test.describe('Cart Functionality', () => {
 
     await page.locator('div[data-sku]').first().click();
     await productPage.addToCartBtn.click();
+  });
+  test('Verify if it is possible to add a product to the cart', async ({
+    page,
+  }) => {
+    const cartPage = new CartPage(page);
+    const miniCartPage = new MiniCartPage(page);
+
     await expect(miniCartPage.ProductsCountHeader).toContainText('1');
     await miniCartPage.CheckoutBtn.click();
 
@@ -41,13 +44,7 @@ test.describe('Cart Functionality', () => {
   }) => {
     const cartPage = new CartPage(page);
     const miniCartPage = new MiniCartPage(page);
-    const navPage = new NavPage(page);
-    const productPage = new ProductPage(page);
 
-    await navPage.goToShop();
-
-    await page.locator('div[data-sku]').first().click();
-    await productPage.addToCartBtn.click();
     await miniCartPage.CheckoutBtn.click();
 
     await cartPage.checkoutBtn.waitFor();
